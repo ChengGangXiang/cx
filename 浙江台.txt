@@ -1,0 +1,12 @@
+1,https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
+2,https://ali-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8
+3,https://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8
+4,https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
+5,https://ali-m-l.cztv.com/channels/lantian/channel005/1080p.m3u8
+6,https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8
+7,https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8
+8,https://ali-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8
+9,https://ali-m-l.cztv.com/channels/lantian/channel009/1080p.m3u8
+10,https://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8
+11,https://ali-m-l.cztv.com/channels/lantian/channel011/1080p.m3u8
+12,https://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8
