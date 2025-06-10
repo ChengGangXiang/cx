@@ -1,7 +1,7 @@
 const csdown = {
     d: [],
     author: '流苏',
-    version: '20250520_1',
+    version: '20250520_2',
     rely: (data) => {
         return data.match(/\{([\s\S]*)\}/)[0].replace(/\{([\s\S]*)\}/, '$1')
     },
@@ -13,7 +13,7 @@ const csdown = {
             if (getItem('up' + csdown.version, '') == '') {
                 confirm({
                     title: '更新内容',
-                    content: '版本号：' + csdown.version + '\n1.修复一些bug\n2.增加一些bug\n3.增加长按更新茄子服务器数据\n4.增加长按更换线路(没事别换)\n5.搜索界面增加搜索框\n6.增加av百科\n7.首页增加部分模块\n8.综合部分二级页面修改\n9.看不了的是服务器问题，与我无关\n10.修复瓜太郎二级页面空白问题\n11.临时修复部分模块，更新后自行重生或更换线路9\n12.茄子服务器已修复，自行更换为线路1\n13.修改漫画二级页面\n14.修复猫咪系列模块无法打开的问题\n15.百科增加模块，自行长按更新数据\n16.修复蘑菇视频播放(最好挂代理)\n17.修复搜索中部分模块图片不显示的问题\n18.修复图标及部分线路\n19.替换可用线路\n20.待续',
+                    content: '版本号：' + csdown.version + '\n1.已替换可用域名\n2.长按首页或综合可更新数据和线路\n3.密码已更改\n说明:无数据就更新数据，看不了就更换可用线路，以上不行就删除。',
                     confirm: $.toString((version) => {
                         setItem('up' + version, '1')
                     }, csdown.version),
@@ -63,12 +63,12 @@ const csdown = {
                                     title: '更新数据',
                                     js: $.toString(() => {
                                         eval($.require('csdown').rely($.require('csdown').aes));
-                                        let shouye = qzDecrypt(request('http://007.22s.lol/encrypt/api.php?path=qiezi/shouye'));
-                                        let data = qzDecrypt(request('http://007.22s.lol/encrypt/api.php?path=qiezi/zonghe'));
-                                        let search = fetch('http://007.22s.lol/searchconfig/vipapi/vipconfig.txt');
-                                        // var kuozhan=qzDecrypt(request('http://007.22s.lol/encrypt/api.php?path=qiezi/heikeji'));
+                                        let shouye = qzDecrypt(request('http://01.xka3a.top/encrypt/api.php?path=qiezi/shouye'));
+                                        let data = qzDecrypt(request('http://01.xka3a.top/encrypt/api.php?path=qiezi/zonghe'));
+                                        let search = fetch('http://01.xka3a.top/searchconfig/vipapi/vipconfig.txt');
+                                        // var kuozhan=qzDecrypt(request('http://01.xka3a.top/encrypt/api.php?path=qiezi/heikeji'));
                                         // var yuming=qzDecrypt(request('http://01.xka3a.top/encrypt/api.php?path=yuming/yuming'));
-                                        //  var gonggao=qzDecrypt(request('http://007.22s.lol/encrypt/api.php?path=qiezi/qz'));
+                                        //  var gonggao=qzDecrypt(request('http://01.xka3a.top/encrypt/api.php?path=qiezi/qz'));
                                         let avbk = fetch('https://app.caoppht.com/avbk132.php');
                                         //茄子数据
                                         //http://api.xka1.top/qiezi/shouye.txt
@@ -158,7 +158,7 @@ const csdown = {
                     d.push({
                         title: mc,
                         desc: qb,
-                        img: 'http://007.22s.lol' + tp,
+                        img: 'http://01.xka3a.top' + tp,
                         url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").madou()',
                         col_type: 'icon_4_card'
                     })
@@ -166,7 +166,7 @@ const csdown = {
                     d.push({
                         title: mc,
                         desc: qb,
-                        img: 'http://007.22s.lol' + tp,
+                        img: 'http://01.xka3a.top' + tp,
                         url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").tv_91()',
                         col_type: 'icon_4_card'
                     })
@@ -174,7 +174,7 @@ const csdown = {
                     d.push({
                         title: mc,
                         desc: qb,
-                        img: 'http://007.22s.lol' + tp,
+                        img: 'http://01.xka3a.top' + tp,
                         url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").maomi()',
                         col_type: 'icon_4_card'
                     })
@@ -182,7 +182,7 @@ const csdown = {
                     d.push({
                         title: mc,
                         desc: qb,
-                        img: 'http://007.22s.lol' + tp,
+                        img: 'http://01.xka3a.top' + tp,
                         url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").maomiyuanchuang()',
                         col_type: 'icon_4_card'
                     })
@@ -190,7 +190,7 @@ const csdown = {
                     d.push({
                         title: mc,
                         desc: qb,
-                        img: 'http://007.22s.lol' + tp,
+                        img: 'http://01.xka3a.top' + tp,
                         url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").syvideo()',
                         col_type: 'icon_4_card',
                         extra: {
@@ -202,7 +202,7 @@ const csdown = {
             })
             d.push({
                     title: '撸先生',
-                    img: 'http://007.22s.lol/6img/lusir.png',
+                    img: 'http://01.xka3a.top/6img/lusir.png',
                     url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").syvideo()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -211,7 +211,7 @@ const csdown = {
                     }
                 }, {
                     title: '猫咪视频',
-                    img: 'http://007.22s.lol/6img/maomisq.png',
+                    img: 'http://01.xka3a.top/6img/maomisq.png',
                     url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").maomiav()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -220,7 +220,7 @@ const csdown = {
                     }
                 }, {
                     title: 'JAV日本区',
-                    img: 'http://007.22s.lol/6img/javn.png',
+                    img: 'http://01.xka3a.top/6img/javn.png',
                     url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").syvideo()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -231,7 +231,7 @@ const csdown = {
                 /*
                  {
                     title: '秘爱',
-                    img: 'http://007.22s.lol/6img/miai.jpg',
+                    img: 'http://01.xka3a.top/6img/miai.jpg',
                     url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").syvideo()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -242,7 +242,7 @@ const csdown = {
                 */
                 {
                     title: 'UAA视频',
-                    img: 'http://007.22s.lol/6img/uaa.png',
+                    img: 'http://01.xka3a.top/6img/uaa.png',
                     url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").syvideo()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -253,7 +253,7 @@ const csdown = {
                 /*
                 {
                     title: 'UU视频',
-                    img: 'http://007.22s.lol/6img/uusp.png',
+                    img: 'http://01.xka3a.top/6img/uusp.png',
                     url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").syvideo()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -264,7 +264,7 @@ const csdown = {
                 */
                 {
                     title: '图宅',
-                    img: 'http://007.22s.lol/6img/tuzac.png',
+                    img: 'http://01.xka3a.top/6img/tuzac.png',
                     url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").picerji()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -275,7 +275,7 @@ const csdown = {
                 /*
                  {
                     title: '嘿嘿连载',
-                    img: 'http://007.22s.lol/6img/heiheilz.png',
+                    img: 'http://01.xka3a.top/6img/heiheilz.png',
                     url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").manhuaerji()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -284,7 +284,7 @@ const csdown = {
                     }
                 }, {
                     title: '禁漫天堂[新]',
-                    img: 'http://007.22s.lol/6img/jinmantt.png',
+                    img: 'http://01.xka3a.top/6img/jinmantt.png',
                     url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").manhuaerji()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -295,7 +295,7 @@ const csdown = {
                 */
                 {
                     title: '暗网[每日大赛]',
-                    img: 'http://007.22s.lol/6img/meiridasai.png',
+                    img: 'http://01.xka3a.top/6img/meiridasai.png',
                     url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").videoerji()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -304,7 +304,7 @@ const csdown = {
                     }
                 }, {
                     title: '帖子[每日大赛]',
-                    img: 'http://007.22s.lol/6img/meiridasai.png',
+                    img: 'http://01.xka3a.top/6img/meiridasai.png',
                     url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").blackerji()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -313,7 +313,7 @@ const csdown = {
                     }
                 }, {
                     title: '博天堂',
-                    img: 'http://007.22s.lol/6img/f4.png',
+                    img: 'http://01.xka3a.top/6img/f4.png',
                     url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").syvideo()',
                     col_type: 'icon_4_card',
                     extra: {
@@ -324,7 +324,7 @@ const csdown = {
                 /*
                     {
                         title: '小狐狸',
-                        img: 'http://007.22s.lol/6img/xiaohuli1.png',
+                        img: 'http://01.xka3a.top/6img/xiaohuli1.png',
                         url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").syvideo()',
                         col_type: 'icon_4_card',
                         extra: {
@@ -349,7 +349,7 @@ const csdown = {
                         d.push({
                             title: mc,
                             desc: qb,
-                            img: 'http://007.22s.lol' + tp,
+                            img: 'http://01.xka3a.top' + tp,
                             url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").syvideo()',
                             col_type: 'icon_4_card',
                             extra: {
@@ -380,12 +380,12 @@ const csdown = {
             log(e.message)
             if (getMyVar('a') == '') {
                 const host = 'http://randomapi02.changfapiaopiao.top';
-                const shouye = qzDecrypt(request('http://007.22s.lol/encrypt/api.php?path=qiezi/shouye'))
-                const data = qzDecrypt(request('http://007.22s.lol/encrypt/api.php?path=qiezi/zonghe'))
-                const search = fetch('http://007.22s.lol/searchconfig/vipapi/vipconfig.txt')
-                // var kuozhan=qzDecrypt(request('http://007.22s.lol/encrypt/api.php?path=qiezi/heikeji'))
+                const shouye = qzDecrypt(request('http://01.xka3a.top/encrypt/api.php?path=qiezi/shouye'))
+                const data = qzDecrypt(request('http://01.xka3a.top/encrypt/api.php?path=qiezi/zonghe'))
+                const search = fetch('http://01.xka3a.top/searchconfig/vipapi/vipconfig.txt')
+                // var kuozhan=qzDecrypt(request('http://01.xka3a.top/encrypt/api.php?path=qiezi/heikeji'))
                 // var yuming=qzDecrypt(request('http://01.xka3a.top/encrypt/api.php?path=yuming/yuming'))
-                //  var gonggao=qzDecrypt(request('http://007.22s.lol/encrypt/api.php?path=qiezi/qz'))
+                //  var gonggao=qzDecrypt(request('http://01.xka3a.top/encrypt/api.php?path=qiezi/qz'))
                 const avbk = fetch('https://app.caoppht.com/avbk132.php');
                 putMyVar('a', '1');
                 setItem('host', host);
@@ -427,7 +427,7 @@ const csdown = {
                         d.push({
                             title: mc,
                             desc: qb,
-                            img: 'http://007.22s.lol' + tp,
+                            img: 'http://01.xka3a.top' + tp,
                             url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").videoerji()',
                             col_type: 'icon_4_card',
                             extra: {
@@ -439,7 +439,7 @@ const csdown = {
                         d.push({
                             title: mc,
                             desc: qb,
-                            img: 'http://007.22s.lol' + tp,
+                            img: 'http://01.xka3a.top' + tp,
                             url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").videoerji()',
                             col_type: 'icon_4_card',
                             extra: {
@@ -452,7 +452,7 @@ const csdown = {
                     d.push({
                         title: mc,
                         desc: qb,
-                        img: 'http://007.22s.lol' + tp,
+                        img: 'http://01.xka3a.top' + tp,
                         url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").blackerji()',
                         col_type: 'icon_4_card',
                         extra: {
@@ -464,7 +464,7 @@ const csdown = {
                     d.push({
                         title: mc,
                         desc: qb,
-                        img: 'http://007.22s.lol' + tp,
+                        img: 'http://01.xka3a.top' + tp,
                         url: 'hiker://empty?@rule=js:$.require("csdown").zhiboerji()',
                         col_type: 'icon_4_card',
                         extra: {
@@ -477,7 +477,7 @@ const csdown = {
                         d.push({
                             title: mc,
                             desc: qb,
-                            img: 'http://007.22s.lol' + tp,
+                            img: 'http://01.xka3a.top' + tp,
                             url: 'hiker://empty?page=fypage&#noHistory#@rule=js:$.require("csdown").syvideo()',
                             col_type: 'icon_4_card',
                             extra: {
@@ -490,7 +490,7 @@ const csdown = {
                     d.push({
                         title: mc,
                         desc: qb,
-                        img: 'http://007.22s.lol' + tp,
+                        img: 'http://01.xka3a.top' + tp,
                         url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").nvyouerji()',
                         col_type: 'icon_4_card',
                         extra: {
@@ -502,7 +502,7 @@ const csdown = {
                     d.push({
                         title: mc,
                         desc: qb,
-                        img: 'http://007.22s.lol' + tp,
+                        img: 'http://01.xka3a.top' + tp,
                         url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").tieerji()',
                         col_type: 'icon_4_card',
                         extra: {
@@ -514,7 +514,7 @@ const csdown = {
                     d.push({
                         title: mc,
                         desc: qb,
-                        img: 'http://007.22s.lol' + tp,
+                        img: 'http://01.xka3a.top' + tp,
                         url: 'hiker://empty@rule=js:$.require("csdown").zhibojuheerji()',
                         col_type: 'icon_4_card',
                         extra: {
@@ -526,7 +526,7 @@ const csdown = {
                         d.push({
                             title: mc,
                             desc: qb,
-                            img: 'http://007.22s.lol' + tp,
+                            img: 'http://01.xka3a.top' + tp,
                             url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").maomimanhua()',
                             col_type: 'icon_4_card'
                         })
@@ -534,7 +534,7 @@ const csdown = {
                         d.push({
                             title: mc,
                             desc: qb,
-                            img: 'http://007.22s.lol' + tp,
+                            img: 'http://01.xka3a.top' + tp,
                             url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").manhuaerji()',
                             col_type: 'icon_4_card',
                             extra: {
@@ -547,7 +547,7 @@ const csdown = {
                     d.push({
                         title: mc,
                         desc: qb,
-                        img: 'http://007.22s.lol' + tp,
+                        img: 'http://01.xka3a.top' + tp,
                         url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").xiaoshuoerji()',
                         col_type: 'icon_4_card',
                         extra: {
@@ -560,7 +560,7 @@ const csdown = {
                         d.push({
                             title: mc,
                             desc: qb,
-                            img: 'http://007.22s.lol' + tp,
+                            img: 'http://01.xka3a.top' + tp,
                             url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").maomimeitu()',
                             col_type: 'icon_4_card'
                         })
@@ -568,7 +568,7 @@ const csdown = {
                         d.push({
                             title: mc,
                             desc: qb,
-                            img: 'http://007.22s.lol' + tp,
+                            img: 'http://01.xka3a.top' + tp,
                             url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").picerji()',
                             col_type: 'icon_4_card',
                             extra: {
@@ -582,7 +582,7 @@ const csdown = {
                         d.push({
                             title: mc,
                             desc: qb,
-                            img: 'http://007.22s.lol' + tp,
+                            img: 'http://01.xka3a.top' + tp,
                             url: 'hiker://empty?page=fypage@rule=js:$.require("csdown").maomiFM()',
                             col_type: 'icon_4_card'
                         })
@@ -2187,7 +2187,7 @@ const csdown = {
             title: "确认",
             url: $.toString(() => {
                 putMyVar('mima_', input)
-                let code = base64Decode(hexToBase64('6f306f6f306f6f6f306f6f6f6f'))
+                let code = base64Decode(hexToBase64('6373646f776e'))
                 if (input == code) {
                     setItem('𝐜𝐨𝐝𝐞_', '1')
                     toast('密码正确')
