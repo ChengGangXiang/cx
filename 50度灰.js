@@ -26,7 +26,7 @@ const csdown = {
 		var c1 = [{
 			title: '首页&圈子&黑料&分类',
 			id: '1&2&3&4',
-			img: 'hiker://images/menu_back2&hiker://images/menu_rules2&hiker://images/menu_clear2&hiker://images/menu_backup2'
+			img: 'https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/47.png&https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/175.png&https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/78.png&https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/48.png&https://ghfast.top/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/109.png'
 		}];
 		if (MY_PAGE == 1) {
 			eval(csdown.rely(csdown.aes))
@@ -413,28 +413,28 @@ const csdown = {
 			}
 			if ((getMyVar('c2', '111') == 111)) {
 				var data0 =
-					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":' +
-					pg + ',"_t":1}';
+					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":"' +
+pg + '","_t":1}';
 				var url = getItem('host') + '/pwa.php/api/MvList/recommend'; //推荐
 			} else if (getMyVar('c2', '111') == 222) {
 				var data0 =
-					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":' +
-					pg + ',"_t":1}';
+					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":"' +
+pg + '","_t":1}';
 				var url = getItem('host') + '/pwa.php/api/MvList/follow'; //关注
 			} else if (getMyVar('c2', '111') == 333) {
 				var data0 =
-					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":' +
-					pg + ',"_t":1}';
+					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":"' +
+pg + '","_t":1}';
 				var url = getItem('host') + '/pwa.php/api/MvList/list_feature'; //精品
 			} else if (getMyVar('c2', '111') == 444) {
 				var data0 =
-					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":' +
-					pg + ',"_t":1}';
+					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":"' +
+pg + '","_t":1}';
 				var url = getItem('host') + '/pwa.php/api/MvList/list_original'; //原创
 			} else if (getMyVar('c2', '111') == 555) {
 				var data0 =
-					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":' +
-					pg + ',"_t":1}';
+					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":"' +
+pg + '","_t":1}';
 				var url = getItem('host') + '/pwa.php/api/element/list_element'; //猎奇
 				var html = post(url, data0);
 				var lista = JSON.parse(html).data.list
@@ -464,8 +464,8 @@ const csdown = {
 				})
 			} else if (getMyVar('c2', '111') == 666) {
 				var data0 =
-					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":' +
-					pg + ',"_t":1}';
+					'{"system_version":"6.2.1","system_token":null,"system_oauth_new_id":"","system_oauth_type":"pwa","system_oauth_id":"aaCidFG3mAldGW405wx_1743160264138","system_app_type":"","system_build":"","system_build_id":"","page":"' +
+pg + '","_t":1}';
 				var url = getItem('host') + '/pwa.php/api/MvList/featuredzpc'; //制片厂
 			} else {
 				var data0 =
@@ -841,8 +841,9 @@ const csdown = {
 		}
 		setResult(d)
 	},
+    //黑料模块	
 	heiliao: () => {
-		var d = csdown.d;
+	    var d = csdown.d;
 		eval(csdown.rely(csdown.aes))
 		let pg = getParam('page');
 		if (MY_PAGE == 1) {
@@ -950,8 +951,8 @@ const csdown = {
 		eval(csdown.rely(csdown.aes))
 		if (MY_PAGE == 1) {
 			let c5 = [{
-				title: '国产&日韩&欧美&经典三级&动漫CG&其他',
-				id: '0&1&2&3&4&5'
+				title: 'SM&少女&窥视&人兽&恋物&肛门&真人coser&泄物&人妖&道具&孕妇&泄露门&猎奇&内涵段子&PUA撩妹&中文剧情&女同',
+				id: '0&1&2&3&4&5&6&7&8&9&10&11&13&14&15&16&17'
 			}];
 			Cate(c5, 'c5', d);
 		}
