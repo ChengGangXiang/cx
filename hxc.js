@@ -10,7 +10,7 @@ const hxc = {
         if (getItem('up' + hxc.version, '') == '') {
             confirm({
                 title: '更新内容',
-                content: '版本号：' + hxc.version + '\n1.添加搜索\n2.添加女优\n没问题不会再更新',
+                content: '版本号：' + hxc.version + '\n1.添加搜索\n2.添加女​优\n没问题不会再更新',
                 confirm: $.toString((version) => {
                     setItem('up' + version, '1')
                 }, hxc.version),
@@ -32,7 +32,7 @@ const hxc = {
             })
         };
         var c1 = [{
-            title: '视频&专题&合集&短视频&女优',
+            title: '视频&专题&合集&短视频&女​优',
             id: '1&2&3&4&5',
             img: 'https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/47.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/74.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/30.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/9.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/7.png'
         }];
@@ -93,7 +93,7 @@ const hxc = {
         } catch (e) {
             log(e.message)
             if (getMyVar('a') == '') {
-                var host = 'https://a5p3.95agri.com';
+                var host = 'https://ap638.daoshaort.com';
                 putMyVar('a', '1')
                 setItem('host', host)
                 refreshPage()
@@ -214,10 +214,16 @@ const hxc = {
             let data0 = '{"videoId":' + input + '}';
             var url = getItem('host') + '/videos/getPreUrl';
             var url1 = post(url, data0);
-            var url2 = url1.data.url;
-            if (url2) {
-                return url2.replace(/start.*?&sign/, 'sign')
+     if (url1.data.url) {
+            var url2 = url1.data.url;       
+            var muhost = url2.match(/(https?:\/\/[^\/]+(?:\/[^\/]+){3}\/\d+\/)|(https:\/\/(?:[^\/?#]+\/){4})/)[0];         
+            var msign = url2.match(/sign.+/)[0];      
+            var playhtml = fetch(url2);     
+if (playhtml) {   
+            var murl = muhost + playhtml.match(/(1|2)000kb\/.+/)[0]; 
+                return murl.replace(/start.*?&sign/, 'sign')
             }
+          }
             return 'toast://未获取到链接'
         })
     }),
