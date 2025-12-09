@@ -1,7 +1,7 @@
 const csdown = {
     d: [],
     title: 'R星精选',
-    author: 'Timik',
+    author: '流苏',
     version: '20251205',
     movie_new: function() {
         var d = this.d;
@@ -143,7 +143,7 @@ const csdown = {
     home: function() {
         var d = this.d;
         if (MY_PAGE == 1) {
-            d.push({   
+            d.push({   
                 title: "搜索 ",
                 url: $.toString(() => {
                     putMyVar('keyword', input)
@@ -152,7 +152,7 @@ const csdown = {
                     })
                 }),
                 desc: "请输入搜索关键词",
-                 col_type: "input",
+                 col_type: "input",
                 extra: {
                     defaultValue: getMyVar('keyword', ''),
                     onChange: $.toString(() => {
@@ -359,7 +359,7 @@ const csdown = {
         var dc = storage0.getItem(mark, '0') == '0' ? sdesc : desc;
         var cs = storage0.getItem(mark, '0') == '0' ? colors.hide : colors.show;
         d.push({
-            title: '' + '<b><font color="#098AC1">∷剧情简介	</font></b>' + "<small><a style='text-decoration: none;' href='" + lazy + "'>" + sc + '</a></small><br><font color="' + cs + '">' + `${dc}` + '</small>',
+            title: '' + '<b><font color="#098AC1">∷剧情简介        </font></b>' + "<small><a style='text-decoration: none;' href='" + lazy + "'>" + sc + '</a></small><br><font color="' + cs + '">' + `${dc}` + '</small>',
             col_type: 'rich_text',
             extra: {
                 id: 'desc',
@@ -1741,15 +1741,15 @@ const csdown = {
                     title: '',
                     col_type: 'rich_text',
                 })
-                d.push({   
+                d.push({   
                     title: "搜索 ",
                     url: $.toString(() => {
                         putMyVar('keyword', input)
                         refreshPage(false)
                         return "hiker://empty"
                     }),
-                       desc: "请输入搜索关键词",
-                       col_type: "input",
+                       desc: "请输入搜索关键词",
+                       col_type: "input",
                     extra: {
                         defaultValue: getMyVar('keyword', ''),
                         pageTitle: '搜索结果'
