@@ -1,3 +1,4 @@
+js:
 const csdown = {
     d: [],
     author: '流苏',
@@ -54,7 +55,7 @@ const csdown = {
                         js: $.toString(() => {
                             eval($.require("csdown").rely($.require("csdown").aes))
                             let num = Number(input.match(/\d+/)[0]);
-                            var url = "https://www.cdnblackmyth.club|https://www.cdnmhwscc.vip|https://www.cdnmhws.cc|https://www.cdnuc.vip".split('|');
+                            var url = "https://www.cdnsha.org|https://www.cdnzack.cc|www.cdnaspa.vip|www.cdnplaystation6.vip".split('|');
                             let img_host = post(url[num - 1] + '/setting').img_host;
                             log(img_host)
                             setItem('img_host', img_host)
@@ -155,7 +156,7 @@ const csdown = {
         } catch (e) {
             log(e.message)
             if (getMyVar('a', '') == '') {
-                var url = "https://www.cdnblackmyth.club|https://www.cdnmhwscc.vip|https://www.cdnmhws.cc|https://www.cdnuc.vip".split('|');
+                var url = "https://www.cdnsha.org|https://www.cdnzack.cc|www.cdnaspa.vip|www.cdnplaystation6.vip".split('|');
                 //域名获取
                 var t = Math.floor(Date.now() / 1000) + '';
                 for (var item of url) {
