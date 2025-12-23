@@ -55,7 +55,7 @@ const csdown = {
                         js: $.toString(() => {
                             eval($.require("csdown").rely($.require("csdown").aes))
                             let num = Number(input.match(/\d+/)[0]);
-                            var url = "https://www.cdnsha.org|https://www.cdnzack.cc|www.cdnaspa.vip|www.cdnplaystation6.vip".split('|');
+                            var url = "https://www.cdnsha.org|https://www.cdnaspa.vip|https://www.cdnplaystation6.vip|https://www.cdnzack.cc".split('|');
                             let img_host = post(url[num - 1] + '/setting').img_host;
                             log(img_host)
                             setItem('img_host', img_host)
@@ -156,7 +156,7 @@ const csdown = {
         } catch (e) {
             log(e.message)
             if (getMyVar('a', '') == '') {
-                var url = "https://www.cdnsha.org|https://www.cdnzack.cc|www.cdnaspa.vip|www.cdnplaystation6.vip".split('|');
+                var url = "https://www.cdnsha.org|https://www.cdnaspa.vip|https://www.cdnplaystation6.vip|https://www.cdnzack.cc".split('|');
                 //域名获取
                 var t = Math.floor(Date.now() / 1000) + '';
                 for (var item of url) {
