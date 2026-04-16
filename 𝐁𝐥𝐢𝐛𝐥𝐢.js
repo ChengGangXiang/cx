@@ -1,7 +1,7 @@
 const csdown = {
     d: [],
     author: '流苏',
-    version: '20250406',
+    version: '20260411',
     rely: (data) => {
         return data.match(/\{([\s\S]*)\}/)[0].replace(/\{([\s\S]*)\}/, '$1')
     },
@@ -197,7 +197,7 @@ const csdown = {
         } catch (e) {
             log(e.message)
             if (getMyVar('a') == '') {
-                var host = 'https://api.971ibo1q.work';
+                var host = 'https://euyscw.046p9ldb.work';
                 setItem('host', host)
                 putMyVar('a', '1')
                 // 调用方法生成随机字符串
