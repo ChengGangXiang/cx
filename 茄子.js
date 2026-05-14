@@ -135,7 +135,7 @@ let search = fetch(dizhi + '/searchconfig/vipapi/vipconfig.txt');
                                     js: $.toString(() => {
                                         var raw = getItem('gonggao');
 var url = (raw && raw.match(/线路集合(.*?)《/)) ? raw.match(/线路集合(.*?)《/)[1].trim().split('|') :
-          'http://randomapi06.sexladyya.top|http://randomstr.sexladyya.top|http://randomapi08.sexladyya.top|http://api6688.fltv.top/api|http://s001.xka3b.top/api6'.split('|');
+          'http://randomapi06.sexladyya.top|http://206.238.76.97|http://bradzlu5.sexladyya.top|http://randomapi08.sexladyya.top|http://api6688.fltv.top'.split('|');
 
 var option = url.map((_, i) => `线路${i + 1}`);
                                         var Line = {
